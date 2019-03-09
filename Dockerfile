@@ -6,3 +6,4 @@ ENV HOME /home/user
 COPY install.sh install.sh
 RUN bash install.sh
 CMD bash
+RUN curl https://raw.githubusercontent.com/paperbenni/bash/master/import.sh >>~/.bashrc

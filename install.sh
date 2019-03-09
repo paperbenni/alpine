@@ -17,7 +17,3 @@ chmod +x */rclone
 mv */rclone /bin/
 cd ..
 rm -rf test
-
-cd /bin
-https://raw.githubusercontent.com/paperbenni/bash/master/bin/pb > pb
-chmod +x pb
