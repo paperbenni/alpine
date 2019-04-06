@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 for argument in "$@"; do
-    if echo "$argument" | grep -w '\-.*' >/dev/null; then
+    if echo "$argument" | grep -q -w '\-.*'; then
         shift
     else
-        echo "broke at $argument"
+        echo "running $argument"
         break
     fi
 done

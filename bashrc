@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
-#fake sudo to run root commands from other scripts
-
 sudo() {
     for argument in "$@"; do
-        if echo "$argument" | grep -w '\-.*' >/dev/null; then
+        if echo "$argument" | grep -q -w '\-.*'; then
             shift
         else
-            echo "broke at $argument"
+            echo "running $argument"
             break
         fi
     done
-    echo "$@"
+    eval "$@"
+}
+
+papertest() {
+        source <(curl -s https://raw.githubusercontent.com/paperbenni/bash/master/import.sh)
 }
