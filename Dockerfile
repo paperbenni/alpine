@@ -1,5 +1,5 @@
 FROM alpine
-RUN apk add --update wget curl bash unzip tar tmux sed expect autossh && \
+RUN apk add --update wget curl bash unzip tar tmux sed expect autossh netcat-openbsd busybox-extras && \
 rm -rf /var/cache/apk/*
 
 RUN mkdir /home/username
