@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.17.3
 RUN apk add --update wget curl bash unzip tar tmux sed expect autossh netcat-openbsd busybox-extras && \
 rm -rf /var/cache/apk/*
 
